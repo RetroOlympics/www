@@ -1,1 +1,11 @@
-FROM python:3.12
+FROM python:3.11
+
+ENV PYTHONPATH "/workspaces/www/backend/src"
+
+RUN pip install invoke
+RUN pip install flask
+
+EXPOSE 5000
+
+
+
