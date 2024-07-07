@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import logo from "../../public/img/logo.png"
+import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +34,23 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet"/>
         
     </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <header>
+            <Link href={"/"}>
+              <Image src={logo} alt="logo" width={150} height={150}/>
+            </Link>
+            <input type="checkbox" id="menu"/>
+            <label htmlFor="menu" id="menu-label"><i className="bx bx-chevron-down"></i></label>
+            <nav>
+                <a href="/">Teams</a>
+                <a href="/">Standings</a>
+                <a href="/">Schedule</a>
+                <a href="/">Games</a>
+                <a href="/">Volunteers</a>
+                <a href="/">History</a>
+            </nav>
+        </header>
+        {children}</body>
     </html>
   );
 }
