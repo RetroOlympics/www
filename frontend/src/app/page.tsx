@@ -1,113 +1,142 @@
 import Image from "next/image";
+import test from "../../public/img/logo.png"
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  return (       <div><header>
+            <a href="index.html" className="logo">
+              <Image src={test} width={500} height={500}/>
+              <img src="img/logo.png" width="500" height="500" alt="Retro Olympics"/>
+              </a>
+            <input type="checkbox" id="menu"/>
+            <label htmlFor="menu" id="menu-label"><i className="bx bx-chevron-down"></i></label>
+
+        </header>
+
+        <section className="hero">
+            <div className="hero-text">
+                <h3>The 2023-2024 season is coming!</h3>
+                <h2>Gather your team and prepare for the...</h2>
+                <h1>RETRO OLYMPICS!</h1>
+                <div>
+                  <p>This year, teams of 3 will battle it out for the famous retro-olympic medals and a community-sponsored prize pool! Who will emerge victorious?</p>
+                  <p>Scroll down for more information!</p>
+                  <p>Matches to take place every Saturday starting at 5PM UTC.</p>
+                  <a href="https://www.twitch.tv/RetroOlympics"><i className="bx bxl-twitch"></i>Watch Live</a>
+                  <a href="https://www.youtube.com/@retroolympics"><i className="bx bxl-youtube"></i>VODs</a>
+                </div>
+              </div>
+                <div className="hero-img">
+                <img src="img/mascot.png"/>
+            </div>
+
+        </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div className="container"><div className="faq-container">
+  <p id="faq"></p>
+    <h1 className="section__headline">FAQ</h1>
+    <h2 className="c-faqs__headline">General</h2>
+    <ul className="c-faqs">
+      <li className="c-faq c-faq--active">
+        <span className="c-faq__title">What are the RetroOlympics?</span>
+        <div className="c-faq__answer">The RetroOlympics are a competitive retro gaming tournament originating from RetroAchievements that is being streamed on Twitch. Initially created by VoiceOfAutumn with the help of Searo, it is now hosted by a large team of volunteers. The competition mostly takes place within RetroAchievements supporting emulators. Starting in 2023, we are looking into the support of other emulation such as Fightcade and other potential platforms.</div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">How do I join the RetroOlympics?</span>
+        <div className="c-faq__answer">Anyone that has a RetroAchievements account can participate in the tournament. It does not matter how long you have been a member. The RetroOlympics currently take place once per year and once you can sign up, this will be communicated on the both the RetroOlympics and RetroAchievements website.</div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">What does the tournament look like?</span>
+        <div className="c-faq__answer">In general the RetroOlympics are divided into a group stage and a knock-out stage. Each week players will battle against other players in a wide variety of retro games. The format changes each year. Previous editions were individual matches or nationality based. In the 2023-2024 season, players can sign up as a team of 3 players and compete within the usual group stage & knock-out format. </div>
+      </li>
+      <li className="c-faq">
+          <span className="c-faq__title">What's different this year?</span>
+          <div className="c-faq__answer">The format of a group and knock-out stage will remain in the 2023-2024 season. However, this year the competition will be 3 on 3 battles. You can sign up with 2 other players and create your own team once signups are opened. If you don't have a team and can't find one, you can also register as a flex player. We will then put you into contact with other flex players so you can register. Apart from that, instead of having 3 players all play the same game, each week will have 3 different games. Each player can only play one game, so find a team with a wide skillset! Finally, starting in 2023, we will be increasing the usage as FightCade and (very occasionally) other external platforms.</div>
+        </li>
+        <li className="c-faq">
+        <span className="c-faq__title">What can I win?</span>
+        <div className="c-faq__answer">Apart from the honour of being among the greatest retro gamers on this planet, winners will obtain a site badge on RetroAchievements. Additionally, each year we are looking into the possibilities of additional prizes. This year this includes an community-sponsored prize pool.</div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">What does the community-sponsored prize pool look like?</span>
+        <div className="c-faq__answer">This year, we are starting experimenting with the impact of a monetary prize pool and its effect on the competition. We have received an generous amount of donations which we narrowed down to a prize pool of $100, divided as following:
+          <br />
+          • 1st place team: $45 (15x3)
+                  <br />
+                  • 2nd place team: $30 (10x3) 
+                  <br />
+                  • 3rd place team: $15 (5x3)
+                  <br />
+                  • Groups MVP: $5
+                  <br />
+                  • Knock out MVP: $5
         </div>
+      </li>
+
+    </ul> 
+    
+      <h2 className="c-faqs__headline">Rules & Responsibilities</h2>
+    <ul className="c-faqs">
+      <li className="c-faq">
+        <span className="c-faq__title">What are the general rules for the RetroOlympics?</span>
+        <div className="c-faq__answer">• Be in Discord streaming your screen so the referees can ensure the rules are being enforced.
+  <br />
+  • All challenges must be performed in Hardcore Mode unless specified otherwise
+          <br />
+          • When not played on an external platform, all challenges must be performed in an emulator that support achievements/leaderboards 
+          <br />
+          • When not played on an external platform, all challenges must be performed in an emulator that can display the RAhash of the loaded game (You might need to update your RetroArch if you’re using an older version).
+          <br />
+          • Fast Forward & Turbo Input are not allowed
+          <br />
+          • Glitches and cheat codes are not allowed unless specified
+          <br />
+          <br />
+          In case you are in doubt if something that is not listed here, but might give you an unfair advantage, is allowed, contact a referee, but abstain from using it.
+  </div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">What are my responsibilities?</span>
+        <div className="c-faq__answer">• Make sure you arrive on time on the day the matches are being played. Matches will not be delayed. 
+          <br />
+          • Make sure you are able to stream your gameplay to the referee's in the RetroAchievements discord.
+        <br />
+        • Do not abandon your team during the competition and always play to your best ability
+        <br />
+        • Have fun!
       </div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">How do you referee the results of the competition?</span>
+        <div className="c-faq__answer">A referee will be watching the screens of all participants for any forms of an unfair advantage. We will be recording/streaming all gameplay. In the event that the results are unclear, a referee will specify that he/she needs to use the recording to determine the results and will let those be known at a later time.</div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">I don’t agree with the decision of a referee, what can I do?</span>
+        <div className="c-faq__answer">In case you don’t agree with the decision of a referee, you are free to let your dispute be known to one of them. They will further review the results with your considerations in mind, and will announce any new results if applicable.</div>
+      </li>
+      <li className="c-faq c-faq">
+        <span className="c-faq__title">Can I play with a substitute?</span>
+        <div className="c-faq__answer">As a team, you are allowed to sign up one extra substitute. You are not allowed to use any additional substitutes. Please bear in mind all players are required to play an appropriate amount of games to qualify for the site badge. Additionally, the prize pool is split based on teams of 3. In rare cases where one of your players is unable to make it due to unforeseen circumstances, contact a referee for the possibilities.</div>
+      </li>
+    </ul> 
+    
+      <h2 className="c-faqs__headline">Other questions</h2>
+    <ul className="c-faqs">
+      <li className="c-faq">
+        <span className="c-faq__title">Can I help out with making the RetroOlympics happen?</span>
+        <div className="c-faq__answer">We are always looking for volunteers to strengthen our team. If you are interested in helping out as a volunteer, please contact VoiceOfAutumn on the RetroAchievements website.
+  </div>
+      </li>
+      <li className="c-faq">
+        <span className="c-faq__title">Are there any other ways to contribute?</span>
+        <div className="c-faq__answer">If you want to enrichen the prize pool for the competition, please contact VoiceOfAutumn through the RetroAchievements website. If you have any other forms of contribution in mind, feel free to contact them as well.</div>
+      </li>
+    </ul> 
+    
+  </div></div></div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   );
 }
