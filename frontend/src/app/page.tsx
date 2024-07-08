@@ -4,7 +4,7 @@ import test from "../../public/img/logo.png"
 export default function Home() {
   return (       <div><header>
             <a href="index.html" className="logo">
-              <Image src={test} width={500} height={500}/>
+              <Image src={test} width={500} height={500} alt={"logo"}/>
               <img src="img/logo.png" width="500" height="500" alt="Retro Olympics"/>
               </a>
             <input type="checkbox" id="menu"/>
