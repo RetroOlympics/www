@@ -4,7 +4,7 @@ import "./globals.css";
 import logo from "../../public/img/logo.png"
 import Image from "next/image";
 import Link from "next/link";
-
+import Navbar from "./navigationbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -32,21 +32,7 @@ export default function RootLayout({
         
     </head>
       <body className={inter.className}>
-      <header>
-            <Link href={"/"}>
-              <Image src={logo} alt="logo" width={150} height={150}/>
-            </Link>
-            <input type="checkbox" id="menu"/>
-            <label htmlFor="menu" id="menu-label"><i className="bx bx-chevron-down"></i></label>
-            <nav>
-                <a href="/">Teams</a>
-                <a href="/">Standings</a>
-                <a href="/">Schedule</a>
-                <a href="/">Games</a>
-                <a href="/">Volunteers</a>
-                <a href="/">History</a>
-            </nav>
-        </header>
+      <Navbar></Navbar>
         {children}</body>
     </html>
   );

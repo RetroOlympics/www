@@ -1,15 +1,8 @@
-import Image from "next/image";
-import test from "../../public/img/logo.png"
-
+import "./home.css";
 export default function Home() {
-  return (       <div><header>
-            <a href="index.html" className="logo">
-              <Image src={test} width={500} height={500} alt={"logo"}/>
+  return (       <div>
+        <header>
               <img src="img/logo.png" width="500" height="500" alt="Retro Olympics"/>
-              </a>
-            <input type="checkbox" id="menu"/>
-            <label htmlFor="menu" id="menu-label"><i className="bx bx-chevron-down"></i></label>
-
         </header>
 
         <section className="hero">
