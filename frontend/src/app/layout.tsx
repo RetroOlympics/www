@@ -4,7 +4,7 @@ import "./globals.css";
 import logo from "../../public/img/logo.png"
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "./navigationbar";
+import Navbar from "../components/navigationbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
